@@ -41,21 +41,44 @@ font-weight:500;
 }
 
 .hero{
+position:relative;
 background:#1f4d7a;
 color:white;
-padding:60px 32px;
+padding:80px 32px;
 text-align:center;
+overflow:hidden;
 }
 
-.hero h2{
-font-size:34px;
-margin-bottom:12px;
+.hero:after{
+content:"";
+position:absolute;
+right:120px;
+top:40px;
+width:20px;
+height:120px;
+background:white;
+opacity:0.15;
 }
 
-.hero p{
-max-width:720px;
-margin:auto;
-font-size:18px;
+.hero:before{
+content:"";
+position:absolute;
+right:80px;
+top:80px;
+width:100px;
+height:20px;
+background:white;
+opacity:0.15;
+}
+
+.cross-shadow{
+position:absolute;
+right:130px;
+top:160px;
+width:300px;
+height:300px;
+background:linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+transform:rotate(45deg);
 }
 
 .buttons{
