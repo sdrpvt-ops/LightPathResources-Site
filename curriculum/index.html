@@ -39,15 +39,44 @@ font-weight:500;
 }
 
 .hero{
+position:relative;
 background:#1f4d7a;
 color:white;
-padding:50px 32px;
+padding:80px 32px;
 text-align:center;
+overflow:hidden;
+min-height:320px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero-logo{
+position:absolute;
+right:-40px;
+top:-20px;
+height:120%;
+max-height:630px;
+opacity:0.9;
+pointer-events:none;
+z-index:1;
+}
+
+.hero h2,
+.hero p{
+position:relative;
+z-index:2;
 }
 
 .hero h2{
 margin:0 0 10px 0;
 font-size:34px;
+}
+
+.hero p{
+max-width:720px;
+margin:auto;
+font-size:18px;
 }
 
 .section{
@@ -91,6 +120,26 @@ padding:22px;
 margin-top:32px;
 }
 
+@media (max-width: 900px){
+.hero{
+padding:60px 24px;
+min-height:280px;
+}
+
+.hero-logo{
+max-height:420px;
+opacity:0.25;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+}
+
 </style>
 </head>
 
@@ -101,14 +150,16 @@ margin-top:32px;
 <h1>LightPath Resources</h1>
 
 <nav>
-<a href="/">Home</a>
-<a href="/curriculum/">Curriculum</a>
-<a href="/vbs/">VBS</a>
+<a href="../index.html">Home</a>
+<a href="../curriculum/">Curriculum</a>
+<a href="../vbs/">VBS</a>
 </nav>
 
 </header>
 
 <section class="hero">
+
+<img src="../assets/Transparent Cross Guide Path Logo.png" class="hero-logo" alt="LightPath Cross Logo">
 
 <h2>LightPath Curriculum</h2>
 
